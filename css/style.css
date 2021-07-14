@@ -241,7 +241,7 @@ ul{
 .search-form input:focus + .search-label-name .search-content-name,
 .search-form input:valid + .search-label-name .search-content-name{
     transform: translateY(-150%);
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: var(--primary-color);
 }
 
