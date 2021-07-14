@@ -1,0 +1,695 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root{
+    --primary-color: #007AF3;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    background: #F2F2F2;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    overflow-x: hidden;
+}
+
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+
+
+
+.navbar .mobile-menu{
+    width: 2em;
+}
+
+
+a{
+    color: #444444;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin-top: 3em;
+}
+
+
+.img-principale{
+    width: 100%;
+    height: auto;
+}
+
+.img-slogan .container{
+    position: relative;
+}
+
+.img-slogan .slogan{
+    position: absolute;
+    width: 90%;
+    bottom: 8rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.produits-principaux{
+    margin: 2em 0;
+}
+
+.img-produits-principaux{
+    width: 100%;
+    height: auto; 
+}
+
+.container-produits{
+    position: relative;
+}
+
+
+.bouton-fleche{
+    padding: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: white;
+    position: absolute;
+    width: 1.5;
+    z-index: 5;
+    top: 45%;
+    border-radius: 50%;
+    opacity: 0.4;
+}
+
+.bouton-fleche:hover{
+    opacity: 0.8;
+}
+
+
+.container-produits .fleche-g{
+    left: 10%;
+}
+
+.container-produits .fleche-d{
+    left: 80%;
+}
+
+.titre-produits-principaux{
+    position: absolute;
+    width: 100%;
+    top: 5%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.produits-principaux-text{
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+#produits-principaux-fraise{
+    display: block;
+}
+
+
+#produits-principaux-asperge{
+    display: none;
+}
+
+#produits-principaux-courgette{
+    display: none;
+}
+
+
+.produit-recherche-cat{
+    padding: 0 10%;
+}
+
+
+.produit-cat{
+    height: auto;
+    width: 100%;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding:0.5rem;
+}
+
+.produit-cat-legumes{
+    background-image: url(../images/image-legumes.jpeg);
+}
+
+.produit-cat-fruits{
+    background-image: url(../images/image-fruits.jpeg);
+}
+
+.produit-cat-salades{
+    background-image: url(../images/image-salade.jpg);
+}
+
+
+
+/****************************************/
+/****************************************/
+/* *** ***   Partie recherche   *** *** */
+/****************************************/
+/****************************************/
+
+
+
+
+.produit-recherche-filter{
+    height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin:0 0 2rem 0;
+}
+
+.search-form{
+    width: 59%;
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+}
+
+.search-form input{
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+    background-color: #F2F2F2;
+    font-size: 1rem;
+
+}
+
+.search-form label{
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+}
+
+.search-form label::after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid var(--primary-color);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.search-content-name{
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+    font-size:1.5rem;
+}
+
+
+.search-form input:focus + .search-label-name .search-content-name,
+.search-form input:valid + .search-label-name .search-content-name{
+    transform: translateY(-150%);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.search-form input:focus + .search-label-name::after, .search-form input:valid + .search-label-name::after{
+    transform: translateX(0%);
+}
+
+
+
+/* tableau des produits */
+
+.produit-tableau-tout{
+    padding: 0 ;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.origineProduitTableau{
+    display: none;
+}
+
+
+.tableaux-produits{
+    width: 80%;
+    margin-top: 10vh;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.tableaux-produits th{
+    font-size: 2rem;
+    text-decoration:underline var(--primary-color);
+}
+
+#tab-body-produits td{
+    padding: 1.5rem 0.5rem ;
+    font-size: 1.5rem;
+}
+
+#tab-body-produits tr:hover{
+    background: var(--primary-color);
+    cursor: pointer;
+    color: white;
+    
+}
+
+
+
+
+
+
+
+
+
+
+/* footer */
+.footer{
+    background-image: url(../images/champs2-3.jpg);
+    background-repeat: no-repeat;
+    background-repeat: repeat-y;
+    background-size: 100%;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+    /* justify-content:center; */
+    /* align-items: ; */
+    font-size:1rem;
+}
+
+.footer-contact li a{
+    color: white;
+}
+
+
+
+
+
+
+/* gestion du menu  */
+
+.navbar{
+    background: white;
+    padding: 1em;
+}
+
+.navbar .logo{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 1.6em;
+    margin-right: .5rem;
+}
+
+
+.navbar .logo span{
+    color: var(--primary-color);
+}
+
+.navbar .logo span:hover{
+    color:black;
+}
+
+
+.navbar nav{
+    display: none;
+}
+
+.navbar .container{
+    display: flex;
+    place-content: space-between;
+}
+
+.navbar .mobile-menu:hover{
+    cursor: pointer;
+}
+
+
+
+nav.menu-btn{
+    display: block;
+}
+
+nav{
+    position: fixed;
+    z-index: 999;
+
+    width: 100%;
+    right: 0;
+    top: 0;
+    background: #F2F2F2;
+    height: 100vh;
+    padding: 1em;
+}
+
+nav .primary-nav{
+    margin-top: 5em;
+}
+
+nav li a{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block;
+    padding: 0.5em;
+    text-align: center;
+    margin-left: 7%;
+}
+
+nav li a:hover{
+    font-weight: bold;
+    background: var(--primary-color);
+    color: white;
+}
+
+.mobile-menu-exit{
+    float: right;
+    margin: .5em;
+    cursor: pointer;
+}
+
+
+/* gestion image principale */
+.img-p-moyen, .img-p-large{
+    display: none;
+}
+
+
+.img-p-fraises-desktop, .img-p-asperge-desktop, .img-p-courgette-desktop{
+    display: none;
+}
+
+
+.produits-principaux-selection{
+    display: none;
+}
+
+
+#titre-produits-principaux{
+    display: none;
+}
+
+.produits{
+    margin-bottom: 3rem;
+}
+
+/* Partie pour écran large */
+
+@media only screen and (min-width: 750px){
+
+    ::-webkit-scrollbar {
+        display:block;
+        width: .5rem;
+        height: 2rem;
+        background-color: #F2F2F2;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--primary-color);
+    }
+
+
+    .origineProduitTableau{
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-p-moyen{
+        display: block;
+    }
+    .img-p-mobile{
+        display: none;
+    }
+
+    .img-slogan .slogan, .navbar .logo{
+        font-size: 3rem;
+    }
+
+
+
+    .mobile-menu, .mobile-menu-exit{
+        display: none;
+    }
+
+    /* .navbar .container{
+        display: grid;
+        grid-template-columns: 180px auto;
+        justify-content: unset;
+    } */
+
+    .navbar nav{
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        background: none;
+        position: unset;
+        height: auto;
+        width: 100%;
+        padding: .5rem 0 0 0;
+    }
+ 
+    .navbar nav ul{
+        display: flex;
+    }
+
+    .navbar nav a{
+        color: black;
+        font-size: 1em;
+        padding: .1em 1em;
+    }
+
+    .navbar .premier-nav, .navbar .second-nav{
+        margin: 0;
+        display: flex;
+        flex-direction:column;
+        font-size: 1.6rem;
+    }
+
+    .navbar .current{
+        display: none;
+    }
+
+    .navbar a:hover{
+        background: none;
+        color: var(--primary-color);
+    }
+
+    .navbar .goMonPanier a{
+        color: var(--primary-color);
+        font-weight: bold;
+        border-radius: 5em;
+        margin-top: 1.2rem;
+    }
+
+    .navbar .goMonPanier a:hover{
+        background: var(--primary-color);
+        color: white;
+    }
+
+
+
+    /* gestion produits principaux  */
+
+    .img-p-fraises-desktop, .img-p-asperge-desktop, .img-p-courgette-desktop{
+        display: block;
+        /* height: ; */
+    }
+    .img-p-fraises-mobile, .img-p-asperge-mobile, .img-p-courgette-mobile{
+        display: none;
+    }
+
+    .img-produits-principaux{
+        height: 45vh;
+    }
+
+    .footer{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1.5rem;
+    }
+
+
+/* ajustement des espaces */
+
+    .img-produits-principaux{margin-top: 8vh;}
+    .navbar{height: 25vh;}
+    .produit-recherche-cat{margin-top: 6vh}
+
+
+
+    .titre-produits-principaux{
+        font-size: 3rem;
+    }
+    
+    .produits-principaux-text{
+        font-size: 2rem;
+    }
+}
+
+
+
+
+@media only screen and (min-width: 1050px){
+    .img-p-moyen{
+        display: none;
+    }
+    .img-p-large{
+        display: block;
+    }
+
+
+
+    .img-slogan .slogan{
+        bottom: 1rem;
+    }
+
+
+
+
+    .navbar .premier-nav, .navbar .second-nav{
+        flex-direction:row;
+        align-items: flex-end;
+        padding-top: 1rem;
+    }
+
+    .img-slogan .slogan, .navbar .logo{
+        font-size: 3rem;
+    }
+
+    .produits-principaux{
+        display: none;
+    }
+
+    
+    /* produits selection: remaniement pour
+       l'écran large */
+
+    
+    #titre-produits-principaux{
+        display: block;
+    }
+
+    .produits-principaux-large{
+        margin-top: 10rem;
+        display: flex;
+        flex-direction: column;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    
+    }
+
+    .produits-principaux-large h2{
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--primary-color);
+    }
+
+
+    .produits-principaux-selection{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: 1.5rem 0 0 0;
+    }
+
+    .produits-principaux-selection img{
+        width: 100%;
+        height: auto;
+    }
+
+    .produits-principaux-selection .produit{
+        position: relative;
+        width: 33.33333%;
+    }
+
+    .produits-principaux-selection .produit p{
+        position: absolute;
+        bottom: .5rem;
+        left: 1.5rem;
+        color: white;
+        font-size: 2rem;
+    }
+
+
+
+
+    /* Partie filtre: categories */
+
+    
+    .produit-recherche-cat{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 3rem;
+    }
+
+    .produit-cat{
+        height: 40vh;
+        width: 30%;
+        border-radius: 10rem;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-color);
+        position: relative;
+    }
+
+    .produit-cat span{
+        background-color: #F2F2F2;
+        border: 1px solid var(--primary-color);
+        border-radius: 5rem;
+        padding: 1rem;
+    }
+
+    .produits-recherche-affichage{
+        margin-bottom: 8rem;
+    }
+
+    .produits{
+        margin-top: 10rem;
+    }
+
+
+
+
+    .search-content-name{
+        font-size:2rem;
+    }
+}

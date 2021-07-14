@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mon titre </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Mon<span>Potager</span></a>
+
+            <img id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="menu boton" style="fill: blue;">
+
+            <nav>
+
+                <img id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="exit menu">
+                
+                <ul class="second-nav">
+                    <li class="current"><a href="index.html">Page d'accueil</a></li>
+                    <li><a href="#">A propos de nous</a></li>
+                    <li><a href="#">Nos produits</a></li>
+                </ul>
+
+                <ul class="premier-nav">
+                    <li><a href="#">Connexion</a></li>
+                    <li class="goMonPanier"><a href="#">Pannier</a></li>
+                </ul>
+
+
+                
+                
+            </nav>
+        </div>
+    </div>
+
+
+    <div class="img-slogan">
+        <div class="container">
+            <img class="img-p-mobile img-principale" src="images/champs1-dim-mobile.jpeg" alt="image principale d'un champs">
+            <img class="img-p-moyen img-principale" src="images/champs1-dim-moyen.jpg" alt="image principale d'un champs">
+            <img class="img-p-large img-principale" src="images/champs1-dim-large2.jpg" alt="image principale d'un champs"> 
+            <p class="slogan"> Voici mon slogan blablabla blablabla</p>
+        </div>
+    </div>
+
+
+    <div class="produits-principaux">
+        <div id="produits-principaux-fraise" class="container-produits">
+            
+            <p class="titre-produits-principaux">Produits de saison</p>
+            
+            <img src="images/fraise.jpeg" alt="fraise" class="img-produits-principaux img-p-fraises-mobile">
+            <img src="images/fraise2-large.jpeg" alt="fraise" class="img-produits-principaux img-p-fraises-desktop">
+            
+            <div class="bouton-fleche fleche-g" >
+            
+                <img  id="btn-PP-g1" src="images/arrow_back_ios_black_24dp.svg" alt="" class="fleche-gauche">
+            
+            </div>
+
+            <div id="btn-PP-d1" class="bouton-fleche fleche-d" >
+                <img src="images/arrow_forward_ios_black_24dp.svg" alt="" class="fleche-droite">
+            </div>
+
+            <p class="produits-principaux-text"> Fraise </p>
+
+        </div>
+
+        <div id="produits-principaux-asperge" class="container-produits">
+            <p class="titre-produits-principaux">Produits de saison</p>
+           
+            <img src="images/asperge.jpeg" alt="asperge" class="img-produits-principaux  img-p-asperge-mobile">
+            <img src="images/asperge2-large.jpg" alt="asperge" class="img-produits-principaux  img-p-asperge-desktop">
+            
+            <div id="btn-PP-g2" class="bouton-fleche fleche-g" >
+            
+                <img src="images/arrow_back_ios_black_24dp.svg" alt="" class="fleche-gauche">
+            
+            </div>
+
+            <div id="btn-PP-d2" class="bouton-fleche fleche-d" >
+                <img src="images/arrow_forward_ios_black_24dp.svg" alt="" class="fleche-droite">
+            </div>
+
+            <p class="produits-principaux-text"> Asperge </p>
+        </div>
+
+        <div id="produits-principaux-courgette" class="container-produits">
+            <p class="titre-produits-principaux">Produits de saison</p>
+            
+            <img src="images/courgette.jpeg" alt="courgette" class="img-produits-principaux img-p-courgette-mobile">
+            <img src="images/courgette-large.jpeg" alt="courgette" class="img-produits-principaux img-p-courgette-desktop">
+            
+            <div id="btn-PP-g3" class="bouton-fleche fleche-g" >
+                <img src="images/arrow_back_ios_black_24dp.svg" alt="" class="fleche-gauche">
+            </div>
+            
+            <div id="btn-PP-d3" class="bouton-fleche fleche-d" >
+                <img src="images/arrow_forward_ios_black_24dp.svg" alt="" class="fleche-droite">
+            </div>
+            
+            <p class="produits-principaux-text"> Courgette </p>
+        </div>
+    </div>
+    
+    <div class="produits-principaux-large">
+        <h2 id="titre-produits-principaux">Nos produits de saison</h2>
+        <div class="produits-principaux-selection">
+            <div class="produit">
+                <img src="images/fraise.jpeg" alt="fraise">
+                <p>Fraise</p>
+            </div>
+            <div class="produit">
+                <img src="images/asperge.jpeg" alt="asperge">
+                <p>Asperge</p>
+            </div>
+            <div class="produit">
+                <img src="images/courgette.jpeg" alt="courgette">
+                <p>Courgette</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="produits">
+        <div class="produit-recherche">
+            <div class="produit-recherche-filter">
+                <div class="search-form">
+                    <input id="input-search" type="text" name="search-name" autocomplete="off" required />
+                    <label for="search-name" class="search-label-name">
+                        <span class="search-content-name">Recherche</span>
+                    </label>
+                </div>
+            </div>
+
+           
+
+            <div class="produit-recherche-cat">
+                <div class="produit-cat produit-cat-legumes"><span>Légumes</span></div>
+                <div class="produit-cat produit-cat-fruits"><span>Fruits</span></div>
+                <div class="produit-cat produit-cat-salades"><span>Salades</span></div>
+            </div>
+        </div>
+        <div class="produits-recherche-affichage">
+            <div class="produit-filtre"></div>
+            
+            <div class="produit-tableau-tout">
+
+                <table id="table-produits" class="tableaux-produits">
+                    <thead>
+                      <tr>
+                        <th id="colonneNom">Nom</th>
+                        <th class="origineProduitTableau" id="colonneOrigine">Origine</th>
+                        <th id="colonneVariete">Varieté</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tab-body-produits">
+                        <tr>
+                            <td>Courgette</td>
+                            <td class="origineProduitTableau">France</td>
+                            <td>Black Beauty</td>
+                        </tr>
+                        <tr>
+                            <td>Avocat</td>
+                            <td class="origineProduitTableau">Espagne</td>
+                            <td>Hass</td>
+                        </tr>
+                        <tr>
+                            <td>banane</td>
+                            <td class="origineProduitTableau">Martinique</td>
+                            <td>Cavendish</td>
+                        </tr>
+
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+        
+
+        </div>
+    </div>
+
+
+
+
+    <div class="footer">
+        <div class="footer-liens">
+            
+            <ul>
+                <p>Liens utiles:</p>
+                <li>blabla</li>
+                <li>blabla</li>
+                <li>blabla</li>
+            </ul>
+            <br>
+        </div>
+        <div class="footer-addresse">
+            <p>Addresse:<br> 9 rue de la paix<br>Paris France</p>
+        </div>
+        <div class="footer-contact">
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li>monPotager@gmail.com</li>
+                <li>04 56 78 91 01</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
